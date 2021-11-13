@@ -12,7 +12,6 @@ class Loading extends StatefulWidget {
 class _LoadingState extends State<Loading> {
 
   void setupCityTemp() async{
-    print('entered thie');
     CityTemp instance = CityTemp(city: 'Mumbai');
     await instance.getTemp();
     Navigator.pushReplacementNamed(context, '/home', arguments: {

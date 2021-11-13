@@ -20,14 +20,8 @@ class _HomeState extends State<Home> {
       backgroundColor: Colors.grey[900],
       body: SafeArea(
         child: Container(
-          // decoration: BoxDecoration(
-          //   image: DecorationImage(
-          //     image: NetworkImage(data['icon']),
-          //     fit: BoxFit.cover,
-          //   ),
-          // ),
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(0, 120.0, 0, 0),
+            padding: const EdgeInsets.fromLTRB(0, 10.0, 0, 0),
             child: Column(
               children: <Widget>[
                 FlatButton.icon(
@@ -55,6 +49,16 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                 ),
+                const SizedBox(height: 100.0),
+                Text(
+                data['icon'],
+                style: TextStyle(
+                  fontFamily: 'MaterialIcons',
+                  color: Colors.grey[200],
+                  fontSize: 50.0,
+                ),
+              ),
+
                 const SizedBox(height: 20.0),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -71,10 +75,64 @@ class _HomeState extends State<Home> {
                 ),
                 const SizedBox(height: 20.0),
                 Text(
-                  '${data['temp'].toString()} \u2103',
+                  '${data['temp']} \u2103',
                   style: TextStyle(
                     fontSize: 66.0,
                     color: Colors.grey[300],
+                  ),
+                ),
+                const SizedBox(height: 10),
+                Text(
+                  '${data['desc']}',
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    color: Colors.grey[500],
+                  ),
+                ),
+                const SizedBox(height: 140),
+                Center(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: <Widget>[
+                      Column(
+                        children: [
+                          Text(
+                            '${data['minTemp']} \u2103',
+                            style: TextStyle(
+                              fontSize: 25.0,
+                              color: Colors.grey[300],
+                            ),
+                          ),
+                          const SizedBox(height: 10),
+                          Text(
+                            'MIN-TEMP',
+                            style: TextStyle(
+                              fontSize: 15.0,
+                              color: Colors.grey[300],
+                            ),
+                          ),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Text(
+                            '${data['maxTemp']} \u2103',
+                            style: TextStyle(
+                              fontSize: 25.0,
+                              color: Colors.grey[300],
+                            ),
+                          ),
+                          const SizedBox(height: 10),
+                          Text(
+                            'MAX-TEMP',
+                            style: TextStyle(
+                              fontSize: 15.0,
+                              color: Colors.grey[300],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 )
               ],

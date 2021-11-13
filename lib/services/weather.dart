@@ -4,11 +4,11 @@ import 'package:intl/intl.dart';
 
 class CityTemp {
   late String city;
-  late String temp;
-  late String minTemp;
-  late String maxTemp;
-  late String desc;
-  late String icon;
+  String? temp;
+  String? minTemp;
+  String? maxTemp;
+  String? desc;
+  String? icon;
 
   CityTemp({
     required this.city,
@@ -31,7 +31,7 @@ class CityTemp {
         icon = 'wb_sunny_rounded';
       }else if(desc == 'Clouds' || desc == 'Squall' || desc == 'Mist'){
         icon = 'cloud_queue_rounded';
-      }else if(desc == 'Ash' || desc == 'Sand' || desc == 'Fog'){
+      }else if(desc == 'Ash' || desc == 'Sand' || desc == 'Fog' || desc == 'Smoke' ){
         icon = 'waves';
       }else if(desc == 'Rain' || desc == 'Drizzle'){
         icon = 'beach_access';

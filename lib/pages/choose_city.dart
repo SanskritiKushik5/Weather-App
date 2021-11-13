@@ -14,6 +14,11 @@ class _ChooseCityState extends State<ChooseCity> {
     CityTemp(city: 'Mumbai'),
     CityTemp(city: 'Delhi'),
     CityTemp(city: 'Chennai'),
+    CityTemp(city: 'Ranchi'),
+    CityTemp(city: 'Jaipur'),
+    CityTemp(city: 'Bengaluru'),
+    CityTemp(city: 'Kanpur'),
+    CityTemp(city: 'Visakhapatnam'),
   ];
   void updateTime(index) async {
     CityTemp instance = locations[index];
@@ -32,7 +37,7 @@ class _ChooseCityState extends State<ChooseCity> {
     return Scaffold(
       backgroundColor: Colors.grey[200],
       appBar: AppBar(
-        backgroundColor: Colors.blue[900],
+        backgroundColor: Colors.grey[900],
         title: Text('Choose a Location'),
         centerTitle: true,
         elevation: 0,
@@ -44,6 +49,7 @@ class _ChooseCityState extends State<ChooseCity> {
               padding: const EdgeInsets.symmetric(vertical: 1.0, horizontal: 4.0),
               child: Card(
                 child: ListTile(
+                  tileColor: Colors.grey[300],
                   onTap: () {
                     updateTime(index);
                   },
